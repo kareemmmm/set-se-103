@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -maxdepth 1 -name "*.html" -exec sh -c 'test ! -f "../$(basename "$1")" -o "$1" -nt "../$(basename "$1")" && cp "$1" ".."' _ {} \;
