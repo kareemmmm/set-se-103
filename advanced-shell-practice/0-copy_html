@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 -name "*.html" -exec sh -c 'if test ! -f "../$(basename "$1")" -o "$1" -nt "../$(basename "$1")"; then cp "$1" ".."; fi' _ {} \;
+find . -maxdepth 1 -name "*.html" -exec cp -u {} .. \;
